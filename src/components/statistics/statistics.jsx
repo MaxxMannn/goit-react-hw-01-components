@@ -1,6 +1,6 @@
 import TitleContainer from './title/title'
 import StatListContainer from './statList/statList'
-
+import PropTypes from 'prop-types';
 import {Exercise2card} from './statisticsStyled'
 
 export const Statistics = ({stats}) => {
@@ -17,3 +17,9 @@ export const Statistics = ({stats}) => {
      
     )
 };
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
+};
+
+export default Statistics;

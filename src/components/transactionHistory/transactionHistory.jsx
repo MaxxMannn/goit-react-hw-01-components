@@ -1,6 +1,6 @@
 import Tbody from './tbody/tbody';
 import Thead from './thead/thead';
-
+import PropTypes from 'prop-types';
 import {Exercise4card} from './transactionHistoryStyled'
 
 export const TransactionHistory = ({items}) => {
@@ -14,3 +14,9 @@ export const TransactionHistory = ({items}) => {
      
     )
   };
+
+TransactionHistory.propTypes = {
+    items: PropTypes.array.isRequired,
+  };
+  
+  export default TransactionHistory;
