@@ -3,13 +3,13 @@ import StatListContainer from './statList/statList'
 import PropTypes from 'prop-types';
 import {Exercise2card} from './statisticsStyled'
 
-export const Statistics = ({stats}) => {
+export const Statistics = ({stats, title}) => {
   
     return(
       <Exercise2card>
-       <TitleContainer 
-       title="Upload stats"
-       />
+       {title && <TitleContainer 
+       title={title}
+       />}
        <StatListContainer
        stats={stats} 
        />
